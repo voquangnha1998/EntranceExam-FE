@@ -1,0 +1,50 @@
+.submit-form{
+    font-size: 14px;
+}
+
+.lable-input{
+    color: #5E5873;
+}
+
+.lable-require, .lable-input {
+    font-size: 12px;
+    font-weight: 400;
+}
+
+.lable-require {
+    color: red;
+}
+
+.input-field{
+    color: #141414;
+    font-size: 12px;
+    font-weight: 400;
+}
+
+.divider-with-text {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  color: #6E6B7B;
+  margin-top: 1rem;
+  font-size: 14px;
+}
+
+.divider-with-text::before,
+.divider-with-text::after {
+  content: "";
+  flex: 1;
+  border-bottom: 1px solid #ccc;
+  margin: 0 0.5rem;
+}
+
+.no-underline {
+  text-decoration: none;
+  color: #7367F0;
+}
+
+.button-submit{
+    background-color: #7367F0 ;
+    color: white;
+    border: none;
+}
