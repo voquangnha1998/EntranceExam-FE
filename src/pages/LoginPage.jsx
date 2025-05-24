@@ -98,7 +98,7 @@ const LoginPage = () => {
   return (
     <Container fluid className="p-0" style={{ maxHeight: "1080px" }}>
       <Row className="m-0 vh-100">
-        <Col md={6} className="p-0">
+        <Col md={8} className="p-0">
           <img
             src={loginImage}
             alt="Login"
@@ -107,7 +107,7 @@ const LoginPage = () => {
           />
         </Col>
         <Col
-          md={6}
+          md={4}
           className="d-flex align-items-center justify-content-center"
           style={{ backgroundColor: "#fff" }}
         >
@@ -143,7 +143,7 @@ const LoginPage = () => {
 
               <FormGroup>
                 <div className="d-flex justify-content-between align-items-center">
-                  <Label for="password" className="mb-0">Password</Label>
+                  <Label for="password" className="mb-0">Password<Label className="lable-require">*</Label></Label>
                   <Link
                     to="/forgot-password"
                     className="text-primary small"
@@ -156,6 +156,7 @@ const LoginPage = () => {
                   id="password"
                   type="password"
                   value={form.password}
+                  placeholder="••••••••"
                   onChange={(e) => {
                     const val = e.target.value;
                     setForm((prev) => ({ ...prev, password: val }));

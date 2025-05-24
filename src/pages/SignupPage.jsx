@@ -114,7 +114,7 @@ const SignupPage = () => {
   return (
     <Container fluid className="p-0" style={{ maxHeight: "1080px" }}>
       <Row className="m-0 vh-100">
-        <Col md={6} className="p-0">
+        <Col md={8} className="p-0">
           <img
             src={signupImage}
             alt="Signup"
@@ -123,7 +123,7 @@ const SignupPage = () => {
           />
         </Col>
         <Col
-          md={6}
+          md={4}
           className="d-flex align-items-center justify-content-center"
           style={{ backgroundColor: "#fff" }}
         >
@@ -200,6 +200,7 @@ const SignupPage = () => {
                   id="password"
                   type="password"
                   value={form.password}
+                  placeholder="••••••••"
                   onChange={(e) => {
                     const val = e.target.value;
                     setForm((prev) => ({ ...prev, password: val }));
@@ -208,17 +209,26 @@ const SignupPage = () => {
                   onBlur={(e) => validateField("password", e.target.value)}
                 />
                 {errors.password ? (
-                  <div className="text-danger mt-1" style={{ fontSize: "0.875rem" }}>
+                  <div
+                    className="mt-1"
+                    style={{
+                      fontSize: "0.875rem",
+                      color:
+                        errors.password === "Password is fair"
+                          ? "#E3A063"
+                          : "#dc3545"
+                    }}
+                  >
                     {errors.password}
                   </div>
                 ) : form.password ? (
-                  form.password.length === 9 ? (
+                  form.password.length <= 9 ? (
                     <div className="mt-1" style={{ fontSize: "0.875rem", color: "#647FFF" }}>
                       Password is good
                     </div>
                   ) : (
                     <div className="mt-1" style={{ fontSize: "0.875rem", color: "#59BC87" }}>
-                      Password is good
+                      Password is strong
                     </div>
                   )
                 ) : null}

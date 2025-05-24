@@ -52,7 +52,7 @@ const Dashboard = () => {
             <span>{auth.user?.name}</span>
           </DropdownToggle>
 
-          <DropdownMenu right style={{ minWidth: '140px', marginTop: '8px' }}>
+          <DropdownMenu right style={{ minWidth: '140px', marginTop: '15px' }}>
             <DropdownItem
               onClick={handleLogout}
               className="d-flex align-items-center justify-content-end gap-2"
